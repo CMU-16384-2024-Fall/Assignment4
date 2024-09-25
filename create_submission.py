@@ -41,7 +41,7 @@ def main():
     # Define the required files for each folder
     required_files = {
         'ex1': [
-            'jacobian_examples.py',
+            'jacobian_example.py',
             'sample_ground_truth.mat',
             'sample_velocities.py',
             'robot.py'
@@ -51,7 +51,7 @@ def main():
             'robot.py'
         ],
         'ex3': [
-            'linear-joint_rajectory.py',
+            'linear_joint_trajectory.py',
             'linear_workspace_trajectory.py',
             'robot.py',
             'verify_linear_joint_trajectory.py',
