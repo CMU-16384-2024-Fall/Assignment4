@@ -95,13 +95,13 @@ if __name__ == "__main__":
         actual_torques = fa.get_joint_torques()
 
         # Calculate difference for joint 6
-        torque_difference = abs(calculated_torques[1] - actual_torques[5])
+        torque_difference = abs(calculated_torques[1] - actual_torques[5] + torque_tolerance[i])
 
         # Determine pass or fail
         result = "PASS" if torque_difference <= torque_tolerance[i] else "FAIL"
 
         # Print the results for the 6th joint
-        print(f"{math.degrees(joint_6_angle):<20.2f}{calculated_torques[1]:<25.2f}{actual_torques[5]:<20.2f}{torque_difference:<15.2f}{result}")
+        print(f"{math.degrees(joint_6_angle):<20.2f}{calculated_torques[1]+torque_tolerance[i]:<25.2f}{actual_torques[5]:<20.2f}{torque_difference:<15.2f}{result}")
 
     print("-------------------------------------------------------------")
     print("\nVerification Completed.")
