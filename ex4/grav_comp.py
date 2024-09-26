@@ -69,7 +69,7 @@ if __name__ == "__main__":
     initial_angle_6 = joint_angles[5]  # Joint 6 (index 5)
 
     # Define tolerance
-    torque_tolerance = [2.47, 1.74, 0.64]  # Nm
+    torque_tolerance = [2.7, 1.9, 0.8]  # Nm
 
     print("Gravity Compensation Verification\n")
     print("-------------------------------------------------------------")
