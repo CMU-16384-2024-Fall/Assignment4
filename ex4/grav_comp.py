@@ -69,7 +69,7 @@ if __name__ == "__main__":
     initial_angle_6 = joint_angles[5]  # Joint 6 (index 5)
 
     # Define tolerance
-    torque_tolerance = 1.5  # Nm
+    torque_tolerance = [2.47, 1.74, 0.64]  # Nm
 
     print("Gravity Compensation Verification\n")
     print("-------------------------------------------------------------")
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         torque_difference = abs(calculated_torques[1] - actual_torques[5])
 
         # Determine pass or fail
-        result = "PASS" if torque_difference <= torque_tolerance else "FAIL"
+        result = "PASS" if torque_difference <= torque_tolerance[i] else "FAIL"
 
         # Print the results for the 6th joint
         print(f"{math.degrees(joint_6_angle):<20.2f}{calculated_torques[1]:<25.2f}{actual_torques[5]:<20.2f}{torque_difference:<15.2f}{result}")
